@@ -1,5 +1,7 @@
 package com.aj.simple_factory_pattern;
 
+import com.aj.tools.XMLUtil;
+
 /**
  * 简单工厂模式(Simple Factory Pattern)
  *      简单工厂模式的介绍：
