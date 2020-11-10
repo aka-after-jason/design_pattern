@@ -28,7 +28,8 @@ public class Simple_Factory_Introduce {
     public static void main(String[] args) {
         // 创建chart对象
         Chart chart = null;
-        chart = ChartFactory.getChart("line");
+        String chartType = XMLUtil.getChartType();
+        chart = ChartFactory.getChart(chartType);
         chart.display();
     }
 }
