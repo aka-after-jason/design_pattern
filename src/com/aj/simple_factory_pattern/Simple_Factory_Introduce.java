@@ -26,11 +26,6 @@ package com.aj.simple_factory_pattern;
 public class Simple_Factory_Introduce {
 
     public static void main(String[] args) {
-//        Product product;
-//        product = Factory.getProduct("B"); // 通过工厂类创建具体的产品对象
-//        product.publicMethod();
-//        product.methodDiff();
-
         // 创建chart对象
         Chart chart = null;
         chart = ChartFactory.getChart("line");
