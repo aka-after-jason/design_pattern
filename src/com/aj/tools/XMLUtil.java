@@ -51,13 +51,15 @@ public class XMLUtil {
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = documentBuilderFactory.newDocumentBuilder();
             Document document;
-            document = builder.parse(new File("class_name.xml"));
+            //document = builder.parse(new File("class_name.xml"));
+            document = builder.parse(new File("skin_type.xml"));
             // 获取文本节点
             NodeList nodeList = document.getElementsByTagName("className");
             Node node = nodeList.item(0).getFirstChild();
             String className = node.getNodeValue().trim();
             // 通过类名生成实例对象并将其返回(注意这里需要制定包名和类名)
-            Class c = Class.forName("com.aj.factory_method_pattern."+className);
+            //Class c = Class.forName("com.aj.factory_method_pattern."+className);
+            Class c = Class.forName("com.aj.abstract_factory_pattern."+className);
             Object object = c.newInstance();
             return object;
         }catch (Exception e){
